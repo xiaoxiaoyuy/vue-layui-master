@@ -23,10 +23,10 @@ export default {
     }
   },
   mounted:function () {
-    this.axios.get('http://192.168.2.103:18500/xst/salary/salinfo')
+    this.axios.get('http://192.168.2.106:18500/xst/salary/list')
         .then(response => {
           console.log(response)
-          this.tableData = response.data.salary
+          this.tableData = response.data.page.list
         });
   },
 }
